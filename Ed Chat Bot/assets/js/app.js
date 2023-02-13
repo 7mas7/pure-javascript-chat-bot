@@ -51,6 +51,9 @@ msgFound = false;
 			// if bot understand user message
 			if (user_msg == messages[i].msg[x] || user_msg == messages[i].msg[x] + " "  || user_msg == " " + messages[i].msg[x] || user_msg == "and " + messages[i].msg[x] || user_msg == "tell me " + messages[i].msg[x] || user_msg == "what is " + messages[i].msg[x] || user_msg == `${bot.name} ${messages[i].msg[x]}` || user_msg == `${messages[i].msg[x]} ${bot.name}` || user_msg == `${messages[i].msg[x]} bot` || user_msg == `do you know ${messages[i].msg[x]}`|| user_msg == `do you know the ${messages[i].msg[x]}`|| user_msg == `you know ${messages[i].msg[x]}`|| user_msg == `you know the ${messages[i].msg[x]}`) {
 					sendMessageFun(messages[i].respond[Math.floor(Math.random() * messages[i].respond.length)],chat_box);
+			}else{
+				// if the bot didn't know what the user saying
+				sendMessageFun('cant understand you',chat_box);
 			}
 		}
 	}
